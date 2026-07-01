@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nova Chat</title>
+    <title>Home — Nova Chat</title>
     <style>
         :root {
             --bg-dark: #0a0a0a;
@@ -22,50 +22,35 @@
             background: var(--bg-dark);
             background: var(--bg-gradient);
             color: var(--text-main);
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Segoe UI', Roboto, sans-serif;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
+        /* Navbar */
         .navbar { width: 100%; max-width: 1200px; display: flex; justify-content: space-between; align-items: center; padding: 20px; }
-        .nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.1rem; color: var(--gold); }
+        .nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; color: var(--gold); text-decoration: none; font-size: 1.1rem; }
         .nav-brand img { width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--gold); }
         .nav-links { display: flex; gap: 25px; list-style: none; }
         .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
         .nav-links a:hover, .nav-links a.active { color: var(--gold-light); }
         .nav-links a.active { border-bottom: 2px solid var(--gold); padding-bottom: 4px; }
-        
         .nav-invite-btn { background-color: var(--gold); color: #000; padding: 8px 18px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.85rem; }
 
-        .hero-container { max-width: 800px; width: 90%; text-align: center; display: flex; flex-direction: column; align-items: center; margin-top: 20px; }
-        
-        .main-bot-icon { width: 130px; height: 130px; border-radius: 50%; margin-bottom: 25px; border: 3px solid var(--gold); box-shadow: 0 0 20px rgba(212, 175, 55, 0.2); }
-        .hero-title { font-size: 3rem; font-weight: 900; color: var(--gold); margin-bottom: 20px; text-shadow: 0 0 10px rgba(212, 175, 55, 0.3); }
-        .hero-description { color: var(--text-muted); line-height: 1.7; margin-bottom: 35px; }
-
-        .hero-buttons { display: flex; gap: 15px; margin-bottom: 40px; justify-content: center; flex-wrap: wrap; }
-        .btn { padding: 12px 24px; border-radius: 6px; font-weight: 600; text-decoration: none; transition: 0.3s; }
-        .btn-gold { background-color: var(--gold); color: #000; }
-        .btn-gray { background-color: #2a2515; color: var(--gold); border: 1px solid var(--gold); }
-        .btn-outline { border: 1px solid var(--gold); color: var(--gold); }
-
-        .features-grid { width: 100%; max-width: 900px; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; margin-bottom: 40px; }
-        .feature-card { background-color: var(--card-bg); border-radius: 12px; padding: 30px; border: 1px solid var(--border-gold); }
-        .feature-card h3 { color: var(--gold-light); margin-bottom: 12px; }
-        .feature-card p { color: var(--text-muted); font-size: 0.95rem; }
-
-        footer { width: 100%; text-align: center; padding: 20px 20px 40px 20px; font-size: 0.85rem; color: var(--text-muted); border-top: 1px solid var(--border-gold); margin-top: 20px; }
-        footer a { color: var(--gold); text-decoration: none; margin: 0 5px; }
+        /* Main Content */
+        .hero { text-align: center; margin-top: 100px; padding: 20px; }
+        .hero h1 { font-size: 3.5rem; color: var(--gold); margin-bottom: 20px; }
+        .hero p { color: var(--text-muted); font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px; }
     </style>
 </head>
 <body>
 
     <nav class="navbar">
-        <a href="https://khizarstar.github.io/novachat/index.html" class="nav-brand" style="text-decoration:none;"><img src="bot.png" alt="Nova Chat"> <span>Nova Chat</span></a>
+        <a href="index.html" class="nav-brand"><img src="bot.png" alt="Nova Chat"> <span>Nova Chat</span></a>
         <ul class="nav-links">
-            <li><a href="https://khizarstar.github.io/novachat/index.html" class="active">Home</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="features.html">Features</a></li>
             <li><a href="commands.html">Commands</a></li>
             <li><a href="guidelines.html">Guidelines</a></li>
@@ -73,33 +58,10 @@
         <a href="https://top.gg/bot/1493498407271141536/invite" class="nav-invite-btn">Invite Bot</a>
     </nav>
 
-    <main class="hero-container">
-        <img src="bot.png" alt="Nova Chat Logo" class="main-bot-icon">
-        <h1 class="hero-title">Nova Chat</h1>
-        <p class="hero-description">Power up your community with an all-in-one Discord application matrix. Streamline server management, track leveling loops, enforce deep auto-moderation systems, and play ultra-clear audio channels flawlessly.</p>
-        
-        <div class="hero-buttons">
-            <a href="https://top.gg/bot/1493498407271141536/invite" class="btn btn-gold">Add to Discord</a>
-            <a href="#" class="btn btn-gray">Support Server</a>
-            <a href="features.html" class="btn btn-outline">Explore Features</a>
-        </div>
-
-        <div class="features-grid">
-            <div class="feature-card"><h3>Enterprise Security</h3><p>Keep your assets fully locked down with advanced anti-spam layers, regex-based message pattern checks, and proactive anti-nuke safeguards.</p></div>
-            <div class="feature-card"><h3>Gamified Engagement</h3><p>Retain active chat participation via automated role rewards, dynamic leveling progression charts, and mathematically fair giveaway tools.</p></div>
-            <div class="feature-card"><h3>Premium Entertainment</h3><p>Pipe crystal-clear audio tracking engines, full live internet radio networks, and immersive virtual economy casinos straight into your layout.</p></div>
-        </div>
+    <main class="hero">
+        <h1>NOVA CHAT</h1>
+        <p>Your intelligent, adaptable AI assistant designed to deliver a professional, friendly, and reliable experience for every conversation.</p>
     </main>
-
-    <footer>
-        <p>&copy; 2026 <strong>Nova Chat</strong> &mdash; All Rights Reserved.</p>
-        <p>Designed and Authored by <strong>MUHAMMAD KHIZAR</strong> | Hosted via Opticalink</p>
-        <p>
-            <a href="terms.html">Terms of Service</a> &bull; 
-            <a href="privacy.html">Privacy Policy</a> &bull; 
-            <a href="https://khizarstar.github.io/novachat/guidelines.html">Guidelines</a>
-        </p>
-    </footer>
 
 </body>
 </html>
