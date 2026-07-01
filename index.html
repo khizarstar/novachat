@@ -3,99 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home — Nova Chat</title>
+    <title>NOVACORE — All-in-one Discord Application Matrix</title>
     <style>
         :root {
-            --bg-dark: #0a0a0a;
-            --bg-gradient: radial-gradient(circle at top, #1a1708 0%, #0a0a0a 70%);
-            --card-bg: #14120a;
-            --gold: #d4af37;
-            --gold-light: #f5d677;
+            --bg-dark: #0f0c1b;
+            --bg-gradient: radial-gradient(circle at top, #1c1437 0%, #0c0819 70%);
+            --card-bg: #16122c;
+            --blurple: #5865f2;
+            --blurple-hover: #4752c4;
+            --btn-secondary: #3c3754;
+            --btn-secondary-hover: #4d476b;
             --text-main: #ffffff;
-            --text-muted: #a69a75;
-            --border-gold: rgba(212, 175, 55, 0.3);
+            --text-muted: #8e87b2;
+            --cyan: #3fe2c3;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background: var(--bg-dark); background: var(--bg-gradient); color: var(--text-main); font-family: 'Segoe UI', Roboto, sans-serif; min-height: 100vh; display: flex; flex-direction: column; align-items: center; }
 
-        /* Navbar */
-        .navbar { width: 100%; max-width: 1200px; display: flex; justify-content: space-between; align-items: center; padding: 20px; }
-        .nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; color: var(--gold); text-decoration: none; font-size: 1.1rem; }
-        .nav-brand img { width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--gold); }
+        body {
+            background: var(--bg-dark);
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .navbar { width: 100%; max-width: 1200px; display: flex; justify-content: space-between; align-items: center; padding: 20px; margin-bottom: 40px; }
+        .nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: 1px; font-size: 1.1rem; }
+        .nav-brand img { width: 32px; height: 32px; border-radius: 50%; }
+
         .nav-links { display: flex; gap: 25px; list-style: none; }
-        .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
-        .nav-links a.active { color: var(--gold-light); border-bottom: 2px solid var(--gold); }
-        .nav-invite-btn { background-color: var(--gold); color: #000; padding: 8px 18px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.85rem; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--cyan); }
+        .nav-links a.active { border-bottom: 2px solid var(--cyan); padding-bottom: 4px; }
 
-        /* Hero Section */
-        .hero { text-align: center; margin-top: 60px; padding: 20px; }
-        .bot-logo { width: 120px; height: 120px; border-radius: 50%; border: 2px solid var(--gold); margin-bottom: 20px; }
-        .hero h1 { font-size: 3rem; color: var(--gold); margin-bottom: 15px; }
-        .hero p { color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px; }
-        
-        .cta-buttons { display: flex; gap: 15px; justify-content: center; margin-bottom: 40px; }
-        .btn { padding: 10px 25px; border-radius: 6px; text-decoration: none; font-weight: 600; transition: 0.3s; }
-        .btn-main { background: var(--gold); color: #000; }
-        .btn-sec { border: 1px solid var(--gold); color: var(--gold); }
+        .nav-invite-btn { background-color: var(--blurple); color: white; text-decoration: none; padding: 8px 18px; border-radius: 6px; font-weight: 600; font-size: 0.85rem; transition: background-color 0.2s; }
+        .nav-invite-btn:hover { background-color: var(--blurple-hover); }
 
-        /* Feature Cards (Two Blocks) */
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 800px; width: 90%; margin-bottom: 40px; }
-        .card { background: var(--card-bg); border: 1px solid var(--border-gold); padding: 25px; border-radius: 12px; text-align: center; }
-        .card .icon { font-size: 2rem; margin-bottom: 10px; display: block; }
-        .card h3 { color: var(--gold-light); margin-bottom: 10px; }
-        .card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; }
+        .hero-container { max-width: 800px; width: 90%; text-align: center; display: flex; flex-direction: column; align-items: center; margin-top: 20px; }
+        .main-bot-icon { width: 130px; height: 130px; border-radius: 50%; margin-bottom: 25px; box-shadow: 0 0 30px rgba(88, 101, 242, 0.3); }
+        .hero-title { font-size: 3rem; font-weight: 900; color: var(--cyan); letter-spacing: 2px; margin-bottom: 20px; }
+        .hero-description { color: var(--text-muted); font-size: 1.1rem; line-height: 1.7; max-width: 620px; margin-bottom: 35px; }
 
-        /* Footer */
-        footer { padding: 40px; text-align: center; color: #666; font-size: 0.85rem; border-top: 1px solid #333; width: 100%; }
-        footer a { color: var(--gold); text-decoration: none; margin: 0 10px; }
+        .hero-buttons { display: flex; gap: 15px; margin-bottom: 40px; flex-wrap: wrap; justify-content: center; }
+        .btn { padding: 12px 24px; border-radius: 6px; font-weight: 600; text-decoration: none; font-size: 0.95rem; transition: transform 0.1s, background-color 0.2s; }
+        .btn:active { transform: scale(0.98); }
+        .btn-blurple { background-color: var(--blurple); color: white; }
+        .btn-blurple:hover { background-color: var(--blurple-hover); }
+        .btn-gray { background-color: var(--btn-secondary); color: white; }
+        .btn-gray:hover { background-color: var(--btn-secondary-hover); }
+        .btn-outline { border: 1px solid var(--btn-secondary); color: var(--text-muted); }
+        .btn-outline:hover { background-color: rgba(255, 255, 255, 0.02); color: white; }
+
+        .features-grid { width: 100%; max-width: 900px; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; margin-bottom: 20px; }
+        .feature-card { background-color: var(--card-bg); border-radius: 12px; padding: 30px; text-align: left; border: 1px solid rgba(255, 255, 255, 0.02); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); }
+        .feature-icon { font-size: 1.5rem; margin-bottom: 15px; }
+        .feature-card h3 { font-size: 1.2rem; color: white; margin-bottom: 12px; font-weight: 700; }
+        .feature-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
+
+        footer { width: 100%; text-align: center; padding: 20px; font-size: 0.85rem; color: var(--text-muted); border-top: 1px solid rgba(255, 255, 255, 0.02); margin-top: auto; }
+        footer p { margin-bottom: 8px; }
+        footer strong { color: white; }
+        footer a { color: var(--cyan); text-decoration: none; margin: 0 5px; }
+        footer a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
 
     <nav class="navbar">
-        <a href="https://khizarstar.github.io/novachat/index.html" class="nav-brand"><img src="bot.png" alt="Nova Chat"> <span>Nova Chat</span></a>
+        <div class="nav-brand">
+            <img src="bot.png" alt="NOVACORE">
+            <span>NOVACORE</span>
+        </div>
         <ul class="nav-links">
-            <li><a href="https://khizarstar.github.io/novachat/index.html" class="active">Home</a></li>
-            <li><a href="https://khizarstar.github.io/novachat/features.html">Features</a></li>
-            <li><a href="https://khizarstar.github.io/novachat/commands.html">Commands</a></li>
-            <li><a href="https://khizarstar.github.io/novachat/guidelines.html">Guidelines</a></li>
+            <li><a href="novacore.html" class="active">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="commands.html">Commands</a></li>
+            <li><a href="faq.html">FAQ</a></li>
         </ul>
-        <a href="https://top.gg/bot/1493498407271141536/invite" class="nav-invite-btn">Invite Bot</a>
+        <a href="https://discord.com/oauth2/authorize?client_id=1514950865960571001&permissions=8866461766385649&integration_type=0&scope=bot" target="_blank" class="nav-invite-btn">Invite Bot</a>
     </nav>
 
-    <main class="hero">
-        <img src="bot.png" alt="Logo" class="bot-logo">
-        <h1>NOVA CHAT</h1>
-        <p>Your intelligent, adaptable AI assistant designed to deliver a professional, friendly, and reliable experience for every conversation.</p>
+    <div class="hero-container">
+        <img src="bot.png" alt="NOVACORE Logo" class="main-bot-icon">
+        <h1 class="hero-title">NOVACORE</h1>
+        <p class="hero-description">Power up your community with an all-in-one Discord application matrix. Streamline server management, track leveling loops, enforce deep auto-moderation systems, and play ultra-clear audio channels flawlessly.</p>
         
-        <div class="cta-buttons">
-            <a href="https://top.gg/bot/1493498407271141536/invite" class="btn btn-main">Add to Discord</a>
-            <a href="https://discord.gg/c5ZzKUYgUY" class="btn btn-sec">Support Server</a>
-            <a href="https://khizarstar.github.io/novachat/features.html" class="btn btn-sec">Explore Features</a>
+        <div class="hero-buttons">
+            <a href="https://discord.com/oauth2/authorize?client_id=1514950865960571001&permissions=8866461766385649&integration_type=0&scope=bot" target="_blank" class="btn btn-blurple">Add to Discord</a>
+            <a href="https://discord.gg/UxmPNvSSXp" target="_blank" class="btn btn-gray">Support Server</a>
+            <a href="features.html" class="btn btn-outline">Explore Features</a>
         </div>
 
         <div class="features-grid">
-            <article class="card">
-                <span class="icon">📖</span>
-                <h3>Quran & Hadith</h3>
-                <p>Access authentic, verified knowledge with deep insights into verses and traditions.</p>
-            </article>
-            <article class="card">
-                <span class="icon">💬</span>
-                <h3>Interactive AI</h3>
-                <p>Engage in respectful, meaningful, and intellectual conversations designed for daily learning.</p>
-            </article>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Enterprise Security</h3>
+                <p>Keep your assets fully locked down with advanced anti-spam layers, regex-based message pattern checks, and proactive anti-nuke safeguards.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Gamified Engagement</h3>
+                <p>Retain active chat participation via automated role rewards, dynamic leveling progression charts, and mathematically fair giveaway tools.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎵</div>
+                <h3>Premium Entertainment</h3>
+                <p>Pipe crystal-clear audio tracking engines, full live internet radio networks, and immersive virtual economy casinos straight into your layout.</p>
+            </div>
         </div>
-    </main>
+    </div>
 
     <footer>
-        <p>&copy; 2026 NOVA CHAT — All Rights Reserved.</p>
-        <p>Designed and Authored by <strong>MUHAMMAD KHIZAR</strong> | Hosted via <strong>GitHub Pages</strong></p>
-        <p style="margin-top: 10px;">
-            <a href="https://khizarstar.github.io/novachat/terms.html">⚖️ Terms of Service</a> | 
-            <a href="https://khizarstar.github.io/novachat/privacy.html">🛡️ Privacy Policy</a>
-        </p>
+        <p>&copy; 2026 <strong>NOVACORE</strong> &mdash; All Rights Reserved.</p>
+        <p>Designed and Authored by <strong>MUHAMMAD KHIZAR</strong> | Hosted via Opticalink</p>
+        <p><a href="terms.html">Terms of Service</a> &bull; <a href="privacy.html">Privacy Policy</a></p>
     </footer>
 
 </body>
