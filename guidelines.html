@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Guidelines - Nova Chat</title>
+    <style>
+        :root {
+            --bg-dark: #0a0a0a;
+            --bg-gradient: radial-gradient(circle at top, #1a1708 0%, #0a0a0a 70%);
+            --card-bg: #14120a;
+            --gold: #d4af37;
+            --gold-light: #f5d677;
+            --text-main: #ffffff;
+            --text-muted: #a69a75;
+            --border-gold: rgba(212, 175, 55, 0.3);
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .header { text-align: center; margin-bottom: 50px; }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .rules-grid { max-width: 900px; width: 100%; display: flex; flex-direction: column; gap: 25px; }
+
+        .rule-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-gold);
+            border-radius: 12px;
+            padding: 30px;
+        }
+
+        .rule-title {
+            color: var(--gold-light);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .rule-text { color: var(--text-main); line-height: 1.7; font-size: 0.95rem; margin-bottom: 15px; }
+        .rule-subtext { color: var(--text-muted); line-height: 1.7; font-size: 0.95rem; }
+
+        .warning-box {
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid var(--gold);
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold-light);
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>COMMUNITY GUIDELINES</h1>
+    </div>
+
+    <div class="rules-grid">
+        <article class="rule-card">
+            <div class="rule-title">🛡️ Respect All Members</div>
+            <p class="rule-text">The cornerstone of our community is the mutual respect held between all members. We enforce a strictly professional environment where harassment, bullying, or hate speech is met with immediate intervention.</p>
+        </article>
+
+        <article class="rule-card">
+            <div class="rule-title">💬 No Spamming or Flooding</div>
+            <p class="rule-text">Operational clarity requires a clean interface. Spamming, excessive emoji usage, or mass mentions will be neutralized by our automated filters.</p>
+        </article>
+
+        <article class="rule-card">
+            <div class="rule-title">🔗 Strict Anti-Advertising Policy</div>
+            <p class="rule-text">The unauthorized promotion of third-party servers, commercial services, or external invite links is strictly prohibited and will lead to permanent restriction.</p>
+        </article>
+
+        <article class="rule-card">
+            <div class="rule-title">🧭 Proper Channel Utilization</div>
+            <p class="rule-text">Every channel serves a distinct purpose. Please ensure your contributions align with the channel's intent to maintain an orderly environment.</p>
+        </article>
+
+        <article class="rule-card">
+            <div class="rule-title">🚫 Zero Tolerance for Inappropriate Content</div>
+            <p class="rule-text">Content deemed NSFW, explicit, or graphically violent is strictly forbidden. Safety is our non-negotiable operational standard.</p>
+        </article>
+    </div>
+
+    <div class="warning-box">
+        ⚠️ Warning: Using Nova Chat for inappropriate purposes or questions may result in a permanent ban.
+    </div>
+
+</body>
+</html>
