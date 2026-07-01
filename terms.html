@@ -5,61 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service — Nova Chat</title>
     <style>
-        :root {
-            --bg-dark: #0a0a0a;
-            --gold: #d4af37;
-            --gray-card: #1a1a1a;
-            --text-main: #ffffff;
-            --text-muted: #a6a6a6;
-            --border-gold: rgba(212, 175, 55, 0.2);
+        body {
+            background-color: #0a0a0a;
+            color: #d1d1d1;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
         }
-        body { background: var(--bg-dark); color: var(--text-main); font-family: 'Segoe UI', sans-serif; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
-        
-        .container { max-width: 800px; background: var(--gray-card); padding: 40px; border-radius: 12px; border: 1px solid var(--border-gold); }
-        .header { display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-gold); padding-bottom: 20px; margin-bottom: 30px; }
-        .title { color: var(--gold); font-size: 2rem; font-weight: bold; }
-        .date { color: var(--text-muted); font-size: 0.9rem; }
-
-        h2 { color: var(--gold); margin: 30px 0 15px; font-size: 1.3rem; }
-        p, li { color: var(--text-muted); line-height: 1.7; margin-bottom: 15px; }
-        ul { padding-left: 20px; }
-        .contact-box { background: rgba(212, 175, 55, 0.1); padding: 20px; border-left: 4px solid var(--gold); margin-top: 30px; }
+        .container {
+            max-width: 700px;
+            background-color: #1a1a1a;
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+        h1 { color: #ffffff; font-size: 1.8rem; margin-bottom: 20px; }
+        .info-box {
+            background-color: #1c2621;
+            border-left: 4px solid #2e7d32;
+            padding: 15px;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+            color: #b0c4b1;
+            font-style: italic;
+        }
+        h2 { color: #2e7d32; font-size: 1.1rem; margin-top: 30px; margin-bottom: 10px; }
+        p { line-height: 1.6; margin-bottom: 15px; }
+        ul { padding-left: 20px; margin-bottom: 15px; }
+        li { margin-bottom: 10px; }
+        strong { color: #ffffff; }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #666;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="header">
-        <div class="title">TERMS OF SERVICE</div>
-        <div class="date">Last Updated: July 1, 2026</div>
+    <h1>TERMS OF SERVICE</h1>
+    
+    <div class="info-box">
+        By inviting, accessing, implementing, or interacting with the Nova Chat Discord bot, you explicitly agree to be legally bound by these Terms of Service. If you or your server administrators do not agree with any structural provision outlined herein, you must immediately remove the Bot from your server ecosystem.
     </div>
 
-    <h2>📜 1. Acceptance & Scope of Agreement</h2>
-    <p>By inviting, accessing, implementing, or interacting with the Nova Chat Discord bot, you explicitly agree to be legally bound by these Terms of Service. If you or your server administrators do not agree with any provision outlined herein, you must immediately remove the Bot from your server ecosystem.</p>
+    <h2>1. Acceptance & Scope of Agreement</h2>
+    <p>These Terms of Service govern the legal relationship, privileges, and obligations between the Developer, the Support Team, and users or server administrators who utilize Nova Chat. This service is provided to help Discord communities handle comprehensive systems including but not limited to moderation, automated responses, and overall server security.</p>
 
-    <h2>🚫 2. Rules of Engagement & Prohibited Behavior</h2>
-    <p>Users and server administrators maintain full responsibility for ensuring the proper operational context of the Bot. You are strictly prohibited from:</p>
+    <h2>2. Rules of Engagement & Prohibited Behavior</h2>
+    <p>Users and server administrators maintain full responsibility for ensuring the proper operational context of the Bot. You are strictly prohibited from engaging in the following behaviors:</p>
     <ul>
-        <li><strong>Infrastructure Exploitation:</strong> Abusing, overloading, or stress-testing bot commands to trigger outages or API rate limits.</li>
-        <li><strong>Malicious Configurations:</strong> Configuring features for abusive, graphic, or illegal intentions.</li>
-        <li><strong>Reverse Engineering:</strong> Attempting to replicate the codebase or backend design of Nova Chat.</li>
+        <li><strong>Infrastructure Exploitation:</strong> You may not abuse, overload, or stress-test bot commands with intent to initiate an outage or trigger API rate limitations.</li>
+        <li><strong>Malicious Configurations:</strong> Configuring features to targets with abusive, graphic, or illegal intentions is grounds for blacklisting.</li>
+        <li><strong>Reverse Engineering:</strong> Attempting to reverse-engineer, mirror, clone, modify, or unlawfully replicate the operational codebase or backend design of Nova Chat is strictly prohibited.</li>
     </ul>
 
-    <h2>⚙️ 3. Service Delivery & Infrastructure</h2>
-    <p>Nova Chat is provided on an 'as-is' and 'as-available' operational framework. The developer reserves the right to modify system components, perform maintenance, or adjust configurations at any interval without prior notice. We provide no guarantee concerning 100% database availability.</p>
+    <h2>3. Service Delivery & Infrastructure Modifications</h2>
+    <p>Nova Chat is provided purely on an 'as-is' and 'as-available' operational framework. The developer reserves the unified right to modify system components, perform server maintenance updates, or adjust configuration parameters at any given historical interval without prior notice to the global user base.</p>
 
-    <h2>🔒 4. Access Restriction & Blacklist Enforcement</h2>
-    <p>Violation of these terms may result in immediate local or global suspension. Staff maintains absolute administrative authority to restrict users or entire Server IDs from utilizing Nova Chat infrastructure.</p>
+    <h2>4. Access Restriction & Blacklist Enforcement</h2>
+    <p>Violation of any technical, environmental, or administrative guidelines outlined within these Terms may result in immediate local or global suspension. The development staff maintains absolute administrative authority to permanently restrict specific Discord Users or entire Server IDs from utilizing Nova Chat's structural frameworks.</p>
 
-    <h2>⚖️ 5. Disclaimer & Limitation of Liability</h2>
-    <p>Under no legal circumstance shall the administration be held accountable for server disruptions, accidental role-assignment errors, data anomalies, or chat moderation failures resulting from natural bot interactions. It remains the responsibility of server administrators to audit bot roles and security rules.</p>
+    <h2>5. Disclaimer & Limitation of Liability</h2>
+    <p>Under no legal circumstance shall the administration be held accountable for server disruptions, accidental role-assignment errors, data anomalies, or moderation failures resulting from natural bot interactions. It remains the primary operational responsibility of server administrators to audit assigned bot roles and verify execution permissions.</p>
 
-    <div class="contact-box">
-        <h2>📧 6. Inquiries, Data, & Contact Operations</h2>
-        <p>For questions relating to structural feature configuration, infrastructure challenges, or explicit clarification, please submit an official inquiry to our development desk at: <strong>contact.novachat.bot@gmail.com</strong></p>
-    </div>
+    <h2>6. Inquiries, Data, & Contact Operations</h2>
+    <p>For questions relating to structural feature configuration, server infrastructure challenges, or explicit clarification concerning user operational status, please submit an official inquiry to our development desk via electronic mail at <strong>contact.novachat.bot@gmail.com</strong> or query live coordinators located inside our official Support Server infrastructure.</p>
+
+    <footer>
+        &copy; 2026 NOVA CHAT — All Rights Reserved.
+    </footer>
 </div>
 
 </body>
 </html>
-
