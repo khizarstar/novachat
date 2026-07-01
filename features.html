@@ -3,78 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Features — Nova Chat</title>
+    <title>Features — Nova Core</title>
     <style>
         :root {
             --bg-dark: #0a0a0a;
-            --bg-gradient: radial-gradient(circle at top, #1a1708 0%, #0a0a0a 70%);
-            --card-bg: #14120a;
-            --gold: #d4af37;
-            --gold-light: #f5d677;
+            --card-bg: #14121a;
+            --accent: #6a5acd;
             --text-main: #ffffff;
-            --text-muted: #a69a75;
-            --border-gold: rgba(212, 175, 55, 0.3);
+            --text-muted: #a0a0a0;
+            --border: rgba(106, 90, 205, 0.2);
         }
-
-        body {
-            background: var(--bg-dark);
-            background: var(--bg-gradient);
-            color: var(--text-main);
-            font-family: 'Segoe UI', Roboto, sans-serif;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* Navbar */
+        body { background: var(--bg-dark); color: var(--text-main); font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
         .navbar { width: 100%; max-width: 1200px; display: flex; justify-content: space-between; align-items: center; padding: 20px; }
-        .nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; color: var(--gold); text-decoration: none; font-size: 1.1rem; }
-        .nav-brand img { width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--gold); }
+        .nav-brand { font-weight: 800; color: var(--accent); text-decoration: none; font-size: 1.2rem; }
         .nav-links { display: flex; gap: 25px; list-style: none; }
-        .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
-        .nav-links a.active { color: var(--gold-light); border-bottom: 2px solid var(--gold); padding-bottom: 4px; }
-        .nav-invite-btn { background-color: var(--gold); color: #000; padding: 8px 18px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.85rem; }
-
-        /* Container */
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
         .main-container { max-width: 900px; width: 90%; margin-top: 50px; }
-        .page-title { text-align: center; color: var(--gold); margin-bottom: 40px; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; }
-        
-        .feature-card { background: var(--card-bg); border: 1px solid var(--border-gold); padding: 30px; border-radius: 12px; margin-bottom: 25px; }
-        .feature-card h2 { color: var(--gold-light); margin-bottom: 15px; }
-        .feature-card p { color: var(--text-muted); line-height: 1.6; }
+        .page-title { text-align: center; color: var(--text-main); margin-bottom: 40px; text-transform: uppercase; }
+        .feature-card { background: var(--card-bg); border: 1px solid var(--border); padding: 30px; border-radius: 12px; margin-bottom: 25px; }
+        .feature-card h2 { color: var(--accent); margin-bottom: 20px; }
+        .feature-card p { color: var(--text-muted); line-height: 1.8; font-size: 0.95rem; }
     </style>
 </head>
 <body>
 
     <nav class="navbar">
-        <a href="index.html" class="nav-brand"><img src="bot.png" alt="Nova Chat"> <span>Nova Chat</span></a>
+        <a href="index.html" class="nav-brand">Nova Core</a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="features.html" class="active">Features</a></li>
+            <li><a href="features.html">Features</a></li>
             <li><a href="commands.html">Commands</a></li>
             <li><a href="guidelines.html">Guidelines</a></li>
         </ul>
-        <a href="https://top.gg/bot/1493498407271141536/invite" class="nav-invite-btn">Invite Bot</a>
     </nav>
 
     <div class="main-container">
-        <h1 class="page-title">Nova Chat Features</h1>
+        <h1 class="page-title">Nova Core Features</h1>
         
         <article class="feature-card">
             <h2>📖 Quran & Hadith Knowledge</h2>
-            <p>Access authentic Islamic knowledge by exploring Quranic verses with contextual explanations and learning from verified Prophetic traditions.</p>
+            <p>
+                Access a profound repository of authentic Islamic knowledge directly within your Discord server environment. 
+                Our system integrates advanced lookup protocols for Quranic verses, providing users with the original Arabic text, 
+                precise transliterations, and scholarly translations that help bridge the gap in understanding complex meanings. 
+                Beyond the Quran, Nova Core offers an expansive library of verified Prophetic Hadith, categorized by theme, 
+                narrator, and context, ensuring that every piece of information provided is grounded in traditional sources. 
+                Whether you are a student conducting academic research, a community member seeking daily reminders, or simply 
+                someone looking to deepen their personal study, this feature acts as a virtual library that is available 
+                at any hour of the day. The module is designed to encourage critical thinking by allowing users to explore 
+                the *asbab al-nuzul* (reasons for revelation) and the historical context of specific Hadith collections. 
+                By fostering an environment of structured learning, Nova Core ensures that users receive information that is 
+                not only accurate but also presented with the reverence and professionalism appropriate for Islamic studies. 
+                Each query is treated with high priority, utilizing optimized search algorithms to deliver results that 
+                are relevant and easy to digest for audiences of all ages and educational backgrounds within your guild. 
+                Engaging with this knowledge base allows your community to thrive on a foundation of authentic, verifiable, 
+                and spiritually uplifting content that strengthens the collective connection to the primary sources of Islam.
+            </p>
         </article>
 
         <article class="feature-card">
             <h2>🕌 Islamic History & Civilizations</h2>
-            <p>Engage with stories and milestones of early Islamic history, including insights into the Rashidun Caliphate and the rise of great Muslim civilizations.</p>
+            <p>
+                Embark on an immersive journey through time as you explore the rich, multifaceted milestones of early Islamic 
+                history and the expansive growth of various Muslim civilizations. This feature provides detailed historical 
+                chronologies starting from the formative years of the Prophet's mission, extending through the era of the 
+                Rashidun Caliphate, and continuing into the golden ages of the Umayyad, Abbasid, and Ottoman empires. 
+                Users can investigate the social, political, and architectural contributions of great thinkers, scientists, 
+                and leaders who shaped the medieval world and laid the groundwork for modern scientific discovery. 
+                The content is curated to provide insights into how these civilizations governed diverse populations, 
+                managed trade routes, and cultivated arts, literature, and philosophy, reflecting a period of unparalleled 
+                intellectual advancement. By studying these narratives, community members gain a broader perspective on the 
+                challenges and triumphs that defined these societies. The feature is structured to present historical 
+                facts in a narrative format, making it suitable for community lectures, study groups, or individual reading 
+                sessions. You can browse through timelines that highlight the spread of ideas, the evolution of Islamic law, 
+                and the profound impact of Muslim scholars on the European Renaissance and global trade networks. 
+                With Nova Core, history is not just a series of dates, but a vibrant story of human endeavor, faith, and 
+                intellectual curiosity that continues to resonate today. This tool is an essential asset for any server 
+                aiming to provide educational depth and meaningful context to its members, allowing everyone to reflect on 
+                the legacy left by those who preceded us and the values that helped build these global societies.
+            </p>
         </article>
 
         <article class="feature-card">
             <h2>💬 Interactive Islamic Conversations</h2>
-            <p>Experience an AI companion designed for respectful, meaningful discussions about Islamic topics, suitable for daily learning and community study groups.</p>
+            <p>
+                Experience a uniquely crafted AI companion that has been specifically optimized for respectful, 
+                deep, and intellectually stimulating discussions regarding a wide array of Islamic topics. 
+                Unlike standard chat bots, Nova Core uses context-aware logic to handle inquiries with the 
+                necessary nuance, ensuring that every conversation remains grounded in the etiquette of 
+                *Adab* and intellectual humility. Whether you are navigating complex philosophical questions, 
+                seeking guidance on general moral principles, or simply facilitating a daily study session 
+                for your community members, the bot provides thoughtful, coherent, and structured responses. 
+                It is an ideal tool for community groups to use as a moderator or a starting point for 
+                meaningful dialogue, as it is programmed to recognize the gravity of the topics being 
+                discussed and to respond accordingly. Users can ask about the history of Islamic 
+                jurisprudence, the significance of major holidays, or the ethical implications of 
+                modern issues, all while maintaining a safe and welcoming space. The bot serves as a 
+                persistent facilitator that keeps discussions on track and encourages participants to 
+                delve deeper into their learning. By simulating a knowledgeable and patient conversation 
+                partner, Nova Core helps eliminate the intimidation often associated with asking questions 
+                about faith. It is perfect for high-traffic servers where maintaining the quality of discourse 
+                is paramount, as it can act as an educational resource that is always ready to engage, 
+                clarify, and inspire the members of your guild. This feature transforms passive server 
+                interactions into active learning moments, helping to build a more engaged, informed, 
+                and interconnected community that values knowledge as a cornerstone of its digital existence.
+            </p>
         </article>
     </div>
 
